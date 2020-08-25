@@ -25,12 +25,24 @@ Hint#2:
 */
 
 class Solution {
-  public static void main(String [] args){
-  
-    //Test Code: 
+    public static void main(String [] args){
+      
+      //Test Code: 
+       int[] testArray = {12,345,2,6,7896};    
+    }
     
-  }
     public int findNumbers(int[] nums) {
         
-    }
+        int count = 0;
+        for(int i : nums){
+            int counter = 0;
+            
+            while(i != 0){
+                counter++;
+                i /= 10;
+            }
+            count = counter % 2 == 0 ? count + 1 : count;        
+        }
+        return count;       
+    }       
 }
